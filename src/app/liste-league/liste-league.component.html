@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <app-update-league [league]="updatedleague" (leagueupdated)="laegueUpdated($event)" [ajout]="ajout" ></app-update-league>
+        </div>
+
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <thead>
+    <tr> <th>Id</th><th>Nom league</th> </tr>
+    </thead>
+    <tbody *ngFor="let l of league">
+    <tr>
+    <td>{{l.id}}</td>
+    <td>{{l.nom}}</td>
+    <td><a class="btn btn-success" (click)="updateleg(l)">Editer</a></td>
+
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>

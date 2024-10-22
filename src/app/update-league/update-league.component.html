@@ -1,0 +1,20 @@
+<form>
+    <div >
+        <div [hidden]="ajout" >
+
+    <label>ID Catégorie</label>
+    <input type="text" [(ngModel)]="league.id" name="id" class="form-control w-25">
+    </div>
+    </div>
+    <div>
+    <label>Nom League</label>
+    <input type="text" [(ngModel)]="league.nom" name="nomCategorie" class="form-control"
+    placeholder="Entrez un nom de league...">
+    </div>
+    <div class="mt-2">
+     <button type="submit" [disabled]="!league.nom" class="btn btn-success" *ngIf="ajout" (click)="saveCategorie()">Ajouter</button>
+     <button type="submit" [disabled]="ajout==false" class="btn btn-success" *ngIf="ajout==false" >Modiifer</button>
+   
+
+    </div>
+    </form>
